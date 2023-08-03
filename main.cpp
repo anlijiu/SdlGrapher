@@ -1,7 +1,7 @@
 #include <iostream>
 #include "src/Grapher.h"
 #include <math.h>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include <limits>
 

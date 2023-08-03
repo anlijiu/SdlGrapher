@@ -65,9 +65,13 @@ void Grapher::renderAxes() {
             {0xff, 0xff, 0xff, 0xff}
         );
 
+
+        if( surfaceMessage == NULL )
+            throw std::runtime_error( SDL_GetError() );
+
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surfaceMessage);
 
-        SDL_Rect rect;
+        SDL_Rect rect = {0, 0, 0, 0};
         rect.w = surfaceMessage->w;
         rect.h = surfaceMessage->h;
         rect.x = screenX - rect.w / 2;
